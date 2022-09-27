@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fourth-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fourth-project
+  template:
+    metadata:
+      labels:
+        app: fourth-project
+    spec:
+      containers:
+      - name: fourth-project
+        image: ltthanhdev/udacity-fourth-project:1.0.0
+        ports:
+        - containerPort: 80
